@@ -177,7 +177,7 @@
 					if(collection!=null){
 						var data=JSON.parse(collection);
 						var todoCount=0;
-						
+						var doneCount=0;
 						var todoString="";
 						var doneString="";
 						for (var i = data.length - 1; i >= 0; i--) {
@@ -196,13 +196,11 @@
 						};
 						todocount.innerHTML=todoCount;
 						todolist.innerHTML=todoString;
-						
 						donelist.innerHTML=doneString;
 					}
 					else{
 						todocount.innerHTML=0;
-						todolist.innerHTML="";
-						
+						todolist.innerHTML="";						
 						donelist.innerHTML="";
 					}
 
@@ -250,7 +248,6 @@
 			</script>
 		</footer>
 		<!-- Scripts here. Don't remove ↓ -->
-		<script type="text/javascript" src="js/controllers/todos.js"></script>
 		<script src="node_modules/todomvc-common/base.js"></script>
 		<script src="js/app.js"></script>
 		<script src="node_modules/jquery/dist/jquery.js"></script>
