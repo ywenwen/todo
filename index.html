@@ -51,7 +51,7 @@
 		</section>
 			<!-- This section should be hidden by default and shown when there are todos -->
 		<section class="main">
-			<h2 onclick="save()"><span id="todocount"></span>  items left</h2>
+			<h2><span id="todocount"></span>  items left</h2>
 			<ol id="todolist" class="demo-box">
 			</ol>
 			<h2><span id="donecount"></span></h2>
@@ -74,15 +74,15 @@
 					font-size:14px;
 				}
 				input:focus{outline-width:0}
-				p{margin: 0;}
-				li p input{width:480px;height:35px;line-height:14px;text-indent:5px;font-size:20px;}
-				ol,ul{padding:0;list-style:none;}
-				li input{position:absolute;top:2px;left:10px;width:22px;height:22px;cursor:pointer;box-shadow: inset 0 -2px 1px rgba(0,0,0,0.03);}
-				li{height:35px;width:480px;box-shadow:inset 0 -2px 1px rgba(0,0,0,0.03);line-height:32px;position:relative;margin-bottom: 10px;
-				   padding:0 45px;border-radius:3px;border-left: 5px solid #629A9C;}
-				ol li{cursor:move;border:thin solid #999}
+				li p{margin:0;padding-top:20px;}
+				li p input{width:480px;height:35px;line-height:14px;text-indent:5px;font-size:20px;top:-2px;}
+				ol,ul{padding:0px;list-style:none;}
+				li input{position:absolute;top:20px;left:10px;width:24px;height:24px;cursor:pointer;box-shadow: inset 0 -2px 1px rgba(0,0,0,0.03);}
+				li{height:71px;width:480px;box-shadow:inset 0 -2px 1px rgba(0,0,0,0.03);line-height:32px;position:relative;margin-bottom: 10px;
+				   padding:0 45px;border-radius:3px;border-left:5px solid #629A9C;}
+				ol li{cursor:move;border:thin solid #999;}
 			    ul li{border-left: 5px solid #999;opacity: 0.5;}
-				li a{position:absolute;top:2px;right:5px;display:inline-block;width:14px;height:12px;border-radius:14px;border:6px double #FFF;background:#CCC;
+				li a{position:absolute;top:20px;right:5px;display:inline-block;width:14px;height:12px;border-radius:14px;border:6px double #FFF;background:#CCC;
 				line-height:14px;text-align:center;color:#FFF;font-weight:bold;font-size:14px;cursor:pointer;}
 				
 			</style>
