@@ -51,7 +51,7 @@
 		</section>
 			<!-- This section should be hidden by default and shown when there are todos -->
 		<section class="main">
-			<h2><span id="todocount"></span>  items left</h2>
+			<h2 onclick="save()"><span id="todocount"></span>  items left</h2>
 			<ol id="todolist" class="demo-box">
 			</ol>
 			<h2><span id="donecount"></span></h2>
@@ -177,7 +177,7 @@
 					if(collection!=null){
 						var data=JSON.parse(collection);
 						var todoCount=0;
-						var doneCount=0;
+						
 						var todoString="";
 						var doneString="";
 						for (var i = data.length - 1; i >= 0; i--) {
