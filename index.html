@@ -205,42 +205,13 @@
 					}
 
 					var lis=todolist.querySelectorAll('ol li');
-					[].forEach.call(lis, function(li) {
-						li.addEventListener('dragstart', handleDragStart, false);
-						li.addEventListener('dragover', handleDragOver, false);
-						li.addEventListener('drop', handleDrop, false);
-
-						onmouseout =function(){
-							saveSort();
-						};
-					});		
+					
 				}
 
 				window.onload=load;
 				window.addEventListener("storage",load,false);
-				var dragSrcEl = null;
-				function handleDragStart(e) {
-					dragSrcEl = this;
-					e.dataTransfer.effectAllowed = 'move';
-					e.dataTransfer.setData('text/html', this.innerHTML);
-				}
-				function handleDragOver(e) {
-					if (e.preventDefault) {
-						e.preventDefault();
-					}
-					e.dataTransfer.dropEffect = 'move';
-					return false;
-				}
-				function handleDrop(e) {
-					if (e.stopPropagation) {
-						e.stopPropagation(); 
-					}
-					if (dragSrcEl != this) {
-						dragSrcEl.innerHTML = this.innerHTML;
-						this.innerHTML = e.dataTransfer.getData('text/html');
-					}
-					return false;
-				}
+				
+				
 				function clear(){
 					localStorage.clear();
 					load();
